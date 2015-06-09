@@ -21,16 +21,29 @@ Ti.Geolocation.getCurrentPosition(function(e){
 	var data = {
 		type: "place",
 		center: e.coords.latitude + ',' + e.coords.longitude,
-		distance: 1500
+		distance: 50
 	};
 	
 	//Ti.Facebook.requestWithGraphPath('search?type=place&q=bar&center='+latitude+','+longitude+'&distance=1500', {}, 'GET', function(e) {
 	//Ti.Facebook.requestWithGraphPath('me', {}, 'GET', function(e)
     Ti.Facebook.requestWithGraphPath('search?',data,'GET',function(e){
-    	console.log('full'+ JSON.stringify(e));
-    	console.log('part'+ JSON.stringify(e.result.data));
+    	console.log(JSON.parse(JSON.stringify(e)));
+    	console.log(e.result[20]);
+    	var String1 = e.result;
+    	var NameEx = /"name\\\"/;
+    	var EndEx = /",/;
+    	var match = 0;
+    	while (match >= 0){
+    		match = (JSON.stringify(String1)).search(NameEx);
+    		console.log('match = ' + match);    		
+    		var end = String1.search(EndEx);
+    		console.log('end = '+ end);
+    		console.log('result = ' + String1.substring(match, end));
+    		String1 = String1.substring(match);
+    		
+    	};
+    	
     });    
-    
 });
 
 var restaurants = ["Blackjack Burgers", "Cornbob Bill", "Fork and Knife","Mr.Potato",
