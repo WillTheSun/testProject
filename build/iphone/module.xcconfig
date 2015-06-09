@@ -1,0 +1,6 @@
+// this is a generated file - DO NOT EDIT
+
+FACEBOOK_FRAMEWORK_SEARCH_PATHS=$(SRCROOT)/../../modules/iphone/facebook/4.0.3/platform "~/Library/Application Support/Titanium/modules/iphone/facebook/4.0.3/platform"
+FACEBOOK_OTHER_LDFLAGS=$(inherited) -framework Social -framework FacebookSDK
+FRAMEWORK_SEARCH_PATHS=$(inherited) $(FACEBOOK_FRAMEWORK_SEARCH_PATHS) 
+OTHER_LDFLAGS=$(inherited) $(FACEBOOK_OTHER_LDFLAGS) 
