@@ -1,5 +1,5 @@
 
-Tue Jun 09 2015 22:47:57 GMT-0400 (EDT)
+Wed Jun 10 2015 16:01:43 GMT-0400 (EDT)
 
 Operating System
   Name                        = Mac OS X
@@ -21,7 +21,7 @@ Titanium SDK
   Target Platform             = iphone
 
 Command
-  /usr/local/bin/node /Users/williamsun/.appcelerator/install/4.0.1/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform iphone --log-level trace --sdk 4.0.0.GA --project-dir /Users/williamsun/Documents/Appcelerator_Studio_Workspace/testProject --target simulator --ios-version 8.3 --device-family iphone --deploy-type development --sim-type iphone --sim-version 8.3 --device-id 394BBDC6-415C-4057-AC78-581D11FAA449 --skip-js-minify --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 52760 --plugin-paths /Users/williamsun/.appcelerator/install/4.0.1/package/node_modules --config-file /var/folders/bb/1vpj9gtx45qf27bgfdwhc1kc0000gn/T/build-1433904475067.json --no-banner
+  /usr/local/bin/node /Users/williamsun/.appcelerator/install/4.0.1/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform iphone --log-level trace --sdk 4.0.0.GA --project-dir /Users/williamsun/Documents/Appcelerator_Studio_Workspace/testProject --target simulator --ios-version 8.3 --device-family iphone --deploy-type development --sim-type iphone --sim-version 8.3 --device-id 394BBDC6-415C-4057-AC78-581D11FAA449 --skip-js-minify --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 64987 --plugin-paths /Users/williamsun/.appcelerator/install/4.0.1/package/node_modules --config-file /var/folders/bb/1vpj9gtx45qf27bgfdwhc1kc0000gn/T/build-1433966501471.json --no-banner
 
 [DEBUG]  Detecting modules in /Users/williamsun/Library/Application Support/Titanium/modules
 [DEBUG]  Detected android module: com.appcelerator.apm 1.1.1 @ /Users/williamsun/Library/Application Support/Titanium/modules/android/com.appcelerator.apm/1.1.1
@@ -79,19 +79,19 @@ Command
 [DEBUG]  Copying /Users/williamsun/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/iphone/modules/ui/images => /Users/williamsun/Documents/Appcelerator_Studio_Workspace/testProject/build/iphone/build/Debug-iphonesimulator/testProject.app/modules/ui/images
 [DEBUG]  Copying /Users/williamsun/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/iphone/modules/facebook/images => /Users/williamsun/Documents/Appcelerator_Studio_Workspace/testProject/build/iphone/build/Debug-iphonesimulator/testProject.app/modules/facebook/images
 [INFO]   Skipping xcodebuild
-[INFO]   Finished building the application in 243ms
+[INFO]   Finished building the application in 218ms
 [INFO]   Launching iOS Simulator
-[DEBUG]  [ioslib] Removing old log file: /Users/williamsun/Library/Developer/CoreSimulator/Devices/394BBDC6-415C-4057-AC78-581D11FAA449/data/Containers/Data/Application/EFE481B7-1FAE-4513-9066-89A2E551E273/Documents/73983b3b-d57b-4051-9222-ae58c41cebaa.log
+[DEBUG]  [ioslib] Removing old log file: /Users/williamsun/Library/Developer/CoreSimulator/Devices/394BBDC6-415C-4057-AC78-581D11FAA449/data/Containers/Data/Application/A7624F16-7DC8-40C9-87D7-C97139F3A65F/Documents/73983b3b-d57b-4051-9222-ae58c41cebaa.log
 [DEBUG]  [ioslib] Executing: /Users/williamsun/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/node_modules/ioslib/lib/ios-sim "launch" "/Users/williamsun/Documents/Appcelerator_Studio_Workspace/testProject/build/iphone/build/Debug-iphonesimulator/testProject.app" "--verbose" "--xcode-dir" "/Applications/Xcode.app/Contents/Developer" "--udid" "394BBDC6-415C-4057-AC78-581D11FAA449" "--timeout" "180"
 [DEBUG]  [ioslib] Executing: osascript "/Users/williamsun/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/node_modules/ioslib/lib/iphone_sim_activate.scpt" "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app"
-[DEBUG]  [ioslib] [ios-sim] [DEBUG] App Spec: <DTiPhoneSimulatorApplicationSpecifier 0x7fae33f11840> specified by app path /Users/williamsun/Documents/Appcelerator_Studio_Workspace/testProject/build/iphone/build/Debug-iphonesimulator/testProject.app
-[DEBUG]  [ioslib] [ios-sim] [DEBUG] SDK Root: <DTiPhoneSimulatorSystemRoot 0x7fae33d51f40> path=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk
-[DEBUG]  [ioslib] [ios-sim] [DEBUG] Creating named pipe at `/var/folders/bb/1vpj9gtx45qf27bgfdwhc1kc0000gn/T//ios-sim-stderr-pipe-1433904478'
-[DEBUG]  [ioslib] [ios-sim] [DEBUG] Creating named pipe at `/var/folders/bb/1vpj9gtx45qf27bgfdwhc1kc0000gn/T//ios-sim-stdout-pipe-1433904478'
+[DEBUG]  [ioslib] [ios-sim] [DEBUG] App Spec: <DTiPhoneSimulatorApplicationSpecifier 0x7ff45b60a9b0> specified by app path /Users/williamsun/Documents/Appcelerator_Studio_Workspace/testProject/build/iphone/build/Debug-iphonesimulator/testProject.app
+[DEBUG]  [ioslib] [ios-sim] [DEBUG] SDK Root: <DTiPhoneSimulatorSystemRoot 0x7ff45b541dd0> path=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk
+[DEBUG]  [ioslib] [ios-sim] [DEBUG] Creating named pipe at `/var/folders/bb/1vpj9gtx45qf27bgfdwhc1kc0000gn/T//ios-sim-stderr-pipe-1433966504'
+[DEBUG]  [ioslib] [ios-sim] [DEBUG] Creating named pipe at `/var/folders/bb/1vpj9gtx45qf27bgfdwhc1kc0000gn/T//ios-sim-stdout-pipe-1433966504'
 [DEBUG]  [ioslib] [ios-sim] [DEBUG] using device family iphone
 [DEBUG]  [ioslib] [ios-sim] [DEBUG] Comparing A447F802-347C-4D04-8372-2B8C459EAE3B == 394BBDC6-415C-4057-AC78-581D11FAA449
 [DEBUG]  [ioslib] [ios-sim] [DEBUG] Comparing 394BBDC6-415C-4057-AC78-581D11FAA449 == 394BBDC6-415C-4057-AC78-581D11FAA449
 [DEBUG]  [ioslib] [ios-sim] [DEBUG] set device to : iPhone 5
 [DEBUG]  [ioslib] [ios-sim] [DEBUG] Session started
-[DEBUG]  [ioslib] Found application log file: /Users/williamsun/Library/Developer/CoreSimulator/Devices/394BBDC6-415C-4057-AC78-581D11FAA449/data/Containers/Data/Application/3D2FF29B-3AA3-4F0F-B3FF-CC00D2CD85B7/Documents/73983b3b-d57b-4051-9222-ae58c41cebaa.log
-[INFO]   Project built successfully in 5s 422ms
+[DEBUG]  [ioslib] Found application log file: /Users/williamsun/Library/Developer/CoreSimulator/Devices/394BBDC6-415C-4057-AC78-581D11FAA449/data/Containers/Data/Application/F9E3F10F-16E8-40D2-8F6B-249E5E04AD45/Documents/73983b3b-d57b-4051-9222-ae58c41cebaa.log
+[INFO]   Project built successfully in 4s 894ms
