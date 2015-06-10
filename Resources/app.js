@@ -28,25 +28,46 @@ Ti.Geolocation.getCurrentPosition(function(e){
 	//Ti.Facebook.requestWithGraphPath('me', {}, 'GET', function(e)
     Ti.Facebook.requestWithGraphPath('search?',data,'GET',function(e){
     	console.log(JSON.parse(JSON.stringify(e)));
-    	console.log(e.result[20]);
-    	var String1 = e.result;
-    	var NameEx = /"name\\\"/;
-    	var EndEx = /",/;
-    	var match = 0;
-    	while (match >= 0){
-    		match = (JSON.stringify(String1)).search(NameEx);
-    		console.log('match = ' + match);    		
-    		var end = String1.search(EndEx);
-    		console.log('end = '+ end);
-    		console.log('result = ' + String1.substring(match, end));
-    		String1 = String1.substring(match);
-    		
-    	};
-    	
-    });    
+		var f = e.result;
+		var NameEx = /{\"name\":\"(.*?)\"/g;
+		function getMatches(string, regex, index) {
+		  	index || (index = 1);
+		  	var matches = [];
+		  	var match;
+		  	while (match = regex.exec(string)) {
+			    matches.push(match[index]);
+			  }
+			return matches;
+		}
+		var restaurants = getMatches(f,NameEx,1);
+		console.log(restaurants);
+		for (var i=0; i<restaurants.length; i++){
+			console.log(JSON.stringify(restaurants[i]));
+		}
+		
+		for(var i = 0; i < restaurants.length; i++) {
+		    var row = Ti.UI.createTableViewRow({
+		    	backgroundColor: 'white',
+		    	height: 45
+		    });
+		    var lab = Ti.UI.createLabel({
+		        color : '3b5998',
+		        text : (i+1) + ": " + restaurants[i],
+		        textAlign : 'left',
+		        left:15
+		   	});
+		    row.add(lab);
+		    tableData.push(row); 
+		}
+		var tableView = Ti.UI.createTableView({
+   			data : tableData
+		});
+		win1.add(tableView);
+		win1.open();  
+   	});    
 });
 
-var restaurants = ["Blackjack Burgers", "Cornbob Bill", "Fork and Knife","Mr.Potato",
+/*var restaurants = ["Blackjack Burgers", "Cornbob Bill", "Fork and Knife","Mr.Potato",
 					"Salty Fish","Prime 16","Erin's Cafe","The Homeplace",
 					"Jimmy's Pretzels","Zinc Kitchen","Roia","Carne Asada","Veggie Might",
 					"Tacolita"];
@@ -62,11 +83,4 @@ for(var i = 0; i < restaurants.length; i++) {
    	});
     row.add(lab);
     tableData.push(row); 
-}
-
-var tableView = Ti.UI.createTableView({
-    data : tableData
-});
-
-win1.add(tableView);
-win1.open();   
+}*/ 
